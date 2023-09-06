@@ -14,25 +14,26 @@
   </head>
   <body class="bg-black min-h-screen">
     <header>
-      <nav class="flex justify-between h-20 border-b border-gray-600 py-4 px-2">
+      <!-- desktop navbar -->
+      <nav class="desktop-navbar-container">
         <!-- left Side -->
-        <div class="flex items-center gap-x-10 text-gray-400">
+        <div class="desktop-navbar-left-side">
           <!-- logo -->
           <img src="../images/Logo.png" alt="" class="h-full" />
           <!-- links -->
           <div class="space-x-5 text-xl">
-            <a href="#" class="hover:text-white">Home</a>
-            <a href="#" class="hover:text-white">All Movies</a>
-            <a href="#" class="hover:text-white">Categories</a>
+            <a href="#" class="desktop-navbar-link-item">Home</a>
+            <a href="#" class="desktop-navbar-link-item">All Movies</a>
+            <a href="#" class="desktop-navbar-link-item">Categories</a>
           </div>
         </div>
         <!-- Right Side -->
-        <div class="flex items-center gap-x-10">
+        <div class="desktop-navbar-right-side">
           <!-- searchbox -->
           <input
             type="text"
             placeholder="Search Movie With Name"
-            class="input input-bordered input-sm rounded-full w-64"
+            class="desktop-navbar-searchbox"
           />
           <!-- avatar -->
           <div class="h-full">
@@ -50,6 +51,57 @@
               >
                 <li><a>Item 1</a></li>
                 <li><a>Item 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- mobile navbar -->
+      <nav class="mobile-navbar-container">
+        <!-- Logo -->
+        <div class="h-full">
+          <img src="../images/Logo.png" alt="" class="h-full" />
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center">
+          <div class="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer-4" class="drawer-button text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="drawer-side">
+              <label for="my-drawer-4" class="drawer-overlay"></label>
+              <ul
+                class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+              >
+                <!-- Sidebar content here -->
+                <li>
+                  <!-- searchbox -->
+                  <input
+                    type="text"
+                    placeholder="Search Movie With Name"
+                    class="input input-bordered input-sm rounded-full w-64"
+                  />
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Movies</a></li>
+                <li><a href="#">Categories</a></li>
               </ul>
             </div>
           </div>

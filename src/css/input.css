@@ -4,3 +4,23 @@
 * {
   font-family: "roboto";
 }
+@layer components {
+  .desktop-navbar-container {
+    @apply md:flex hidden justify-between h-20 border-b border-gray-600 py-4 px-2;
+  }
+  .desktop-navbar-left-side {
+    @apply flex items-center gap-x-10 text-gray-400;
+  }
+  .desktop-navbar-link-item {
+    @apply hover:text-white;
+  }
+  .desktop-navbar-right-side {
+    @apply flex items-center gap-x-10;
+  }
+  .desktop-navbar-searchbox {
+    @apply input input-bordered input-sm rounded-full w-64;
+  }
+  .mobile-navbar-container {
+    @apply h-20 border-b border-gray-600 py-4 px-2 flex md:hidden justify-between;
+  }
+}
