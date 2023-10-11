@@ -23,4 +23,61 @@
   .mobile-navbar-container {
     @apply h-20 border-b border-gray-600 py-4 px-2 flex md:hidden justify-between;
   }
+  .movie-header {
+    @apply h-28 border-2 border-primary rounded-md flex justify-between px-3;
+  }
+  .movie-header-left-side {
+    @apply h-full w-1/2 text-primary text-2xl flex items-center;
+  }
+  .movie-header-right-side {
+    @apply h-full flex w-1/2 justify-between;
+  }
+  .rating-container {
+    @apply h-full flex gap-x-2 items-center;
+  }
+  .rating-logo-container {
+    @apply h-full flex items-center;
+  }
+  .rating-score {
+    @apply text-3xl font-semibold;
+  }
+  .movie-view-numbers-container {
+    @apply text-white flex flex-col justify-center items-center text-sm;
+  }
+  .movie-view-number {
+    @apply py-0.5 px-1 bg-primary rounded-full;
+  }
+  .movie-actions-container {
+    @apply h-20 bg-gradient-to-br from-primary to-purple-800 rounded-md flex justify-between px-3 mt-5 shadow-md shadow-purple-950;
+  }
+  .movie-information-container {
+    @apply border-2 border-primary p-2 w-4/5 mt-2 rounded-sm flex flex-col gap-y-2;
+  }
+  .movie-information-detail-container {
+    @apply flex justify-between border-b-2 pb-2;
+  }
+  .movie-information-detail-key {
+    @apply text-primary;
+  }
+  .movie-information-detail-value {
+    @apply text-white;
+  }
+  .movie-data-tab-btn {
+    @apply btn btn-sm basis-1/6 border-0;
+  }
+  .movie-data-tab-btn.active {
+    @apply bg-secondary hover:bg-secondary/90 text-white;
+  }
+  .movie-data-tab-content-container {
+    @apply bg-gradient-to-br from-primary to-purple-800 p-2 rounded-md flex justify-between items-center;
+  }
+  .movie-data-download-series-btn {
+    @apply bg-slate-800 text-white px-10 py-2 rounded-md select-none;
+  }
+  .movie-data-link {
+    @apply bg-white text-purple-700 font-semibold border-0 hover:bg-white/90 py-2 px-10 rounded-md transition-all duration-300;
+  }
+  .movie-data-title {
+    @apply text-white text-lg basis-1/3;
+  }
 }

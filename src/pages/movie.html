@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-black min-h-screen">
+    <header>
+      <!-- desktop navbar -->
+      <nav class="desktop-navbar-container">
+        <!-- left Side -->
+        <div class="desktop-navbar-left-side">
+          <!-- logo -->
+          <img src="../images/Logo.png" alt="" class="h-full" />
+          <!-- links -->
+          <div class="space-x-5 text-xl">
+            <a href="#" class="desktop-navbar-link-item">Home</a>
+            <a href="#" class="desktop-navbar-link-item">All Movies</a>
+            <a href="#" class="desktop-navbar-link-item">Categories</a>
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div class="desktop-navbar-right-side">
+          <!-- searchbox -->
+          <input
+            type="text"
+            placeholder="Search Movie With Name"
+            class="desktop-navbar-searchbox"
+          />
+          <!-- avatar -->
+          <div class="h-full">
+            <div class="dropdown dropdown-end h-full">
+              <label tabindex="0" class="h-full">
+                <div class="avatar h-full">
+                  <div class="h-full rounded-full">
+                    <img src="../images/Logo.png" class="h-full" />
+                  </div>
+                </div>
+              </label>
+              <ul
+                tabindex="0"
+                class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- mobile navbar -->
+      <nav class="mobile-navbar-container">
+        <!-- Logo -->
+        <div class="h-full">
+          <img src="../images/Logo.png" alt="" class="h-full" />
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center">
+          <div class="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer-4" class="drawer-button text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="drawer-side">
+              <label for="my-drawer-4" class="drawer-overlay"></label>
+              <ul
+                class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+              >
+                <!-- Sidebar content here -->
+                <li>
+                  <!-- searchbox -->
+                  <input
+                    type="text"
+                    placeholder="Search Movie With Name"
+                    class="input input-bordered input-sm rounded-full w-64"
+                  />
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All Movies</a></li>
+                <li><a href="#">Categories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="w-10/12 mx-auto my-10">
+      <!-- movie header -->
+      <section class="movie-header">
+        <!-- left side -->
+        <div class="movie-header-left-side">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <span>Jujutsu Kaisen 2nd Season </span>
+        </div>
+        <!-- right side -->
+        <div class="movie-header-right-side">
+          <!-- imdb rating -->
+          <div class="rating-container">
+            <!-- image -->
+            <div class="rating-logo-container">
+              <img src="../images/imdb.png" class="h-1/2" />
+            </div>
+            <!-- rate -->
+            <div class="text-white">
+              <span class="rating-score">8.87</span>
+              <span class="text-xs">/</span>
+              <span>10</span>
+            </div>
+          </div>
+          <!-- rotten tomatoes rating -->
+          <div class="rating-container">
+            <!-- image -->
+            <div class="rating-logo-container">
+              <img src="../images/Rotten_Tomatoes.svg.png" class="h-1/2" />
+            </div>
+            <!-- rate -->
+            <div class="text-white">
+              <span class="rating-score">8.87</span>
+              <span class="text-xs">/</span>
+              <span>10</span>
+            </div>
+          </div>
+          <!-- view number -->
+          <div class="movie-view-numbers-container">
+            <span class="movie-view-number">127000</span>
+            <span>views</span>
+          </div>
+        </div>
+      </section>
+      <!-- movie actions -->
+      <section class="movie-actions-container">
+        <div class="flex gap-x-10 items-center">
+          <select class="select select-sm">
+            <option disabled selected>Select Score</option>
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+            <option value="">9</option>
+            <option value="">10</option>
+          </select>
+          <select class="select select-sm">
+            <option disabled selected>Select List</option>
+            <option value="">Plan To Watch</option>
+            <option value="">Complete</option>
+            <option value="">In Queue</option>
+            <option value="">Watching</option>
+            <option value="">Hold</option>
+            <option value="">Drop</option>
+          </select>
+          <!-- Open the modal using ID.showModal() method -->
+          <button class="btn btn-sm" onclick="my_modal_5.showModal()">
+            Write Your Comment
+          </button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <form action="#">
+                <textarea
+                  class="w-full h-20 textarea textarea-bordered"
+                  placeholder="your comment ..."
+                ></textarea>
+                <div class="mt-5">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="btn bg-primary hover:bg-primary/90 text-white btn-sm"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-sm bg-secondary hover:bg-secondary/90"
+                    onclick="my_modal_5.close()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+        </div>
+      </section>
+      <!-- movie information -->
+      <section class="flex mt-5">
+        <!-- poster and informations -->
+        <div class="basis-1/4">
+          <!-- poster -->
+          <div class="w-full">
+            <img
+              src="../images/posters/1.png"
+              alt=""
+              class="w-4/5 rounded-lg"
+            />
+          </div>
+          <!-- informations -->
+          <div class="movie-information-container">
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+            <div class="movie-information-detail-container">
+              <span class="movie-information-detail-key">Title</span>
+              <span class="movie-information-detail-value"
+                >Jujutsu Kaisen 2nd Season</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- data -->
+        <div class="basis-3/4 p-2">
+          <!-- summary -->
+          <div class="border border-gray-500 p-2 rounded-sm">
+            <span class="text-lg text-white">summary:</span>
+            <p class="text-sm text-white text-justify leading-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              minima dolore, eum iusto quaerat totam placeat atque animi
+              voluptatum voluptatem sed quas provident enim, blanditiis sequi
+              iure eaque nobis. Consequatur corporis laudantium ullam corrupti
+              fugit expedita praesentium? Amet iure eum quod soluta vero
+              blanditiis odit, deleniti, molestias excepturi sequi quis,
+              mollitia non laudantium hic provident necessitatibus.
+              Perspiciatis, aspernatur! Sint at distinctio culpa eligendi magni
+              dicta nisi adipisci nobis autem officiis quos excepturi doloremque
+              et temporibus odio, ipsa consequuntur quidem praesentium. Deleniti
+              nam dignissimos illo tenetur soluta atque officia enim omnis
+              officiis! Sit sunt maiores qui odio exercitationem sequi eligendi
+              sapiente quisquam consectetur nesciunt, praesentium quis, nostrum
+              dignissimos voluptatum officiis dolorem, veritatis iste. Doloribus
+              voluptatum quam cumque aliquam sequi facere nesciunt nemo
+              necessitatibus magni expedita officia quibusdam ipsum nihil
+              dolorum tempore temporibus delectus tempora libero perspiciatis
+              veniam obcaecati repudiandae, nam esse? Dignissimos consequuntur
+              aut quisquam quidem sequi, et asperiores cupiditate dicta
+              reiciendis earum fugiat atque omnis sapiente! Obcaecati quo culpa
+              explicabo et animi dolores laboriosam doloribus ipsa aspernatur
+              harum amet cupiditate, repellendus dolorem quisquam doloremque
+              perferendis recusandae. Repudiandae possimus magni adipisci
+              tenetur sunt ab, error, architecto tempore obcaecati voluptatibus
+              dolores iste nihil corporis nemo quos saepe asperiores voluptate
+              sint? Aspernatur, quos.
+            </p>
+          </div>
+          <!-- tabs -->
+          <div x-data="{activeTab:0}">
+            <!-- tabs buttons -->
+            <div class="flex gap-x-5 mt-2">
+              <button
+                class="movie-data-tab-btn"
+                x-bind:class="activeTab==1?'active':''"
+                x-on:click="activeTab=1"
+              >
+                Comments
+              </button>
+              <button
+                class="movie-data-tab-btn"
+                x-on:click="activeTab=2"
+                x-bind:class="activeTab==2?'active':''"
+              >
+                Links
+              </button>
+              <button
+                class="movie-data-tab-btn"
+                x-on:click="activeTab=3"
+                x-bind:class="activeTab==3?'active':''"
+              >
+                Recommendation
+              </button>
+            </div>
+            <!-- tabs content -->
+            <div class="mt-5">
+              <!-- comments -->
+              <div x-show="activeTab==1">
+                <div class="chat chat-start">
+                  <div class="chat-bubble">What kind of nonsense is this</div>
+                </div>
+                <div class="chat chat-start">
+                  <div class="chat-bubble">What kind of nonsense is this</div>
+                </div>
+                <div class="chat chat-start">
+                  <div class="chat-bubble">What kind of nonsense is this</div>
+                </div>
+              </div>
+              <!-- links -->
+              <div x-show="activeTab==2" class="flex flex-col gap-y-2">
+                <div class="movie-data-tab-content-container">
+                  <p class="movie-data-title">tinyMoviez.com</p>
+                  <div class="movie-data-download-series-btn">Download</div>
+                  <a href="#" class="movie-data-link">Open</a>
+                </div>
+                <div class="movie-data-tab-content-container">
+                  <p class="movie-data-title">tinyMoviez.com</p>
+                  <div
+                    class="bg-white text-slate-900 px-10 py-2 rounded-md select-none"
+                  >
+                    Stream
+                  </div>
+                  <a href="#" class="movie-data-link">Open</a>
+                </div>
+              </div>
+              <!-- Recommendation -->
+              <div x-show="activeTab==3" class="flex flex-col gap-y-2">
+                <div class="movie-data-tab-content-container">
+                  <p class="movie-data-title">One Piece</p>
+                  <div class="movie-data-download-series-btn">Series</div>
+                  <a href="#" class="movie-data-link">Open</a>
+                </div>
+                <div class="movie-data-tab-content-container">
+                  <p class="movie-data-title">Naruto</p>
+                  <div
+                    class="bg-white text-slate-900 px-10 py-2 rounded-md select-none"
+                  >
+                    Movie
+                  </div>
+                  <a href="#" class="movie-data-link">Open</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/Alpine.min.js"></script>
+  </body>
+</html>
